@@ -23,7 +23,7 @@ def db_write(db_name, mode, data):
 
 
 
-@bot.message_handler(content_types = ['text'])
+@bot.message_handler(content_types = ['text '])
 def find_phone_number(message):
 
     if re.search(r'(\+7|8|7).*?(\d{3}).*?(\d{3}).*?(\d{2}).*?(\d{2})', message.text):
