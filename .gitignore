@@ -169,4 +169,5 @@ trash/CM.txt
 trash/dockerfile
 trash/settings.py
 trash/UM.txt
-config.py
+# config.py
+dockerfile
