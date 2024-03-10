@@ -127,6 +127,7 @@ celerybeat.pid
 .env
 .venv
 env/
+bot_env/
 venv/
 ENV/
 env.bak/
@@ -168,3 +169,4 @@ trash/CM.txt
 trash/dockerfile
 trash/settings.py
 trash/UM.txt
+config.py
