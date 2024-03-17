@@ -7,10 +7,10 @@ import os
 DB_PATH = './databases/'
 
 
+DEBUG = os.getenv('DEBUG_MODE')
 # DEBUG = False
-DEBUG = True
 
-if DEBUG:
+if DEBUG == 'y':
     # My test bot
     BOT_TOKEN = os.getenv('TEST_BOT_TOKEN')
 else:
@@ -27,11 +27,12 @@ GROUP_ID = (
     ) 
 
 SUPERUSERS = (
-    'sdg9999',
+    # 'sdg9999',
     'Nikita_SOMIO22',
     'hardcorno', 
     'OlegBKzn',
     'MONOLITKAZANN',
+    'Zionmih',
 )
 
 
