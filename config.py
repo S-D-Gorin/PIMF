@@ -24,6 +24,8 @@ SUPERUSERS = (
     'OlegBKzn',
     'MONOLITKAZANN',
     'Zionmih',
+    'nikitasomio',
+    'tenderlar23',
 )
 
 
