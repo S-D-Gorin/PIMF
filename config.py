@@ -26,6 +26,7 @@ SUPERUSERS = (
     'Zionmih',
     'nikitasomio',
     'tenderlar23',
+    'ChannelBot',
 )
 
 
