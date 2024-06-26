@@ -18,7 +18,7 @@ GROUP_ID = (
     ) 
 
 SUPERUSERS = (
-    'sdg9999',
+    # 'sdg9999',
     'Nikita_SOMIO22',
     'hardcorno', 
     'OlegBKzn',
