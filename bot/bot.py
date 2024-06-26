@@ -39,7 +39,7 @@ def spam_security(message):
 
             try:
                 response = bot.get_chat_member(chat_id=TARGET_CHANNEL, user_id=int(message.from_user.id))
-                if response.status not in ('member' or "creator"):
+                if response.status not in ('member', "creator"):
                     if not message_is_deleted:
                         bot.delete_message(message.chat.id, message.message_id)
                         utils.send_info_message_and_delete_old_message(
