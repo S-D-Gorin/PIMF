@@ -170,6 +170,7 @@ trash/dockerfile
 trash/settings.py
 trash/UM.txt
 # config.py
-dockerfile
+# dockerfile
 bot/test.py
 bot/databases/id_bm_from_-1001901700124.txt
+bot/databases/spam_from_chat-1001901700124.txt
