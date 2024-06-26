@@ -90,8 +90,8 @@ class ErrorMessage:
         error_information = f'сократите его на {extra_chars} {last_char(extra_chars)}.По вопросам рекламы в чате обращаться @Nikita_SOMIO22'
         return error_information
     
-    def subscribe_channel():
-        error_information = 'Подпишитесь на канал @tenderlar23 чтобы отправить сообщение'
+    def subscribe_channel(target_channel):
+        error_information = f'Подпишитесь на канал {target_channel} чтобы отправить сообщение'
         return error_information
 
 

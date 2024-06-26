@@ -44,7 +44,7 @@ def spam_security(message):
                         bot.delete_message(message.chat.id, message.message_id)
                         utils.send_info_message_and_delete_old_message(
                             message=message,
-                            info=utils.ErrorMessage.subscribe_channel()
+                            info=utils.ErrorMessage.subscribe_channel(TARGET_CHANNEL)
                         )
                         message_is_deleted = True
 
