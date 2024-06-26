@@ -87,9 +87,8 @@ class ErrorMessage:
     
     def lenght(message):
         extra_chars = len(str(message.text)) - config.MAX_LENGHT
-        error_information = f'\
-                    сократите его на {extra_chars} {last_char(extra_chars)}. \
-                    По вопросам рекламы в чате обращаться @Nikita_SOMIO22'
+        error_information = f'сократите его на {extra_chars} {last_char(extra_chars)}.
+        По вопросам рекламы в чате обращаться @Nikita_SOMIO22'
         return error_information
     
     def subscribe_channel():
