@@ -67,16 +67,33 @@ def send_info_message_and_delete_old_message(message, info):
         # удаление сообщения с выбранным айди
         bot.delete_message(message.chat.id, int(message_id))
 
+def log(message):
+    username = get_user_name(message=message)
+    spam = message.text
+    user_id = message.from_user.id
+    db_write(
+        db_name=f'spam_from_chat{message.chat.id}.txt',
+        mode="a",
+        data=f"User: {username} \n User_id: {user_id} \n Spam: {spam} \n"
+        )
+    
 
 class ErrorMessage:
-    phone = 'добавьте номер телефона в объявление (Начиная с +7 или 8)'
     
+    def phone():
+        error_information = 'добавьте номер телефона в объявление (Начиная с +7 или 8)'
+        return error_information
+
     
     def lenght(message):
         extra_chars = len(str(message.text)) - config.MAX_LENGHT
         error_information = f'\
                     сократите его на {extra_chars} {last_char(extra_chars)}. \
                     По вопросам рекламы в чате обращаться @Nikita_SOMIO22'
+        return error_information
+    
+    def subscribe_channel():
+        error_information = 'Подпишитесь на канал @tenderlar23 чтобы отправить сообщение'
         return error_information
 
 

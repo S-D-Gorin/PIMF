@@ -171,3 +171,4 @@ trash/settings.py
 trash/UM.txt
 # config.py
 dockerfile
+bot/test.py

@@ -18,7 +18,7 @@ GROUP_ID = (
     ) 
 
 SUPERUSERS = (
-    'sdg9999',
+    # 'sdg9999',
     'Nikita_SOMIO22',
     'hardcorno', 
     'OlegBKzn',
@@ -29,6 +29,8 @@ SUPERUSERS = (
     'Channel_Bot',
     'somiokzn',
 )
+
+TARGET_CHANNEL = '@tenderlar23'
 
 
 MAX_LENGHT = 222
