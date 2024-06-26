@@ -28,23 +28,25 @@ def spam_security(message):
             message_is_deleted = True
         
         if str(message.chat.id) == GROUP_ID[1]:    
-            if not (utils.Check.max_lenght(message) and message_is_deleted):
-                bot.delete_message(message.chat.id, message.message_id)
-                utils.send_info_message_and_delete_old_message(
-                    message=message,
-                    info=utils.ErrorMessage.lenght(message)
-                )
-                message_is_deleted = True
-
-            try:
-                response = bot.get_chat_member(chat_id=TARGET_CHANNEL, user_id=int(message.from_user.id))
-                if (response.status != ('member' or "creator")) and (message_is_deleted != True):
+            if not utils.Check.max_lenght(message):
+                if not message_is_deleted:
                     bot.delete_message(message.chat.id, message.message_id)
                     utils.send_info_message_and_delete_old_message(
                         message=message,
-                        info=utils.ErrorMessage.subscribe_channel()
+                        info=utils.ErrorMessage.lenght(message)
                     )
                     message_is_deleted = True
+
+            try:
+                response = bot.get_chat_member(chat_id=TARGET_CHANNEL, user_id=int(message.from_user.id))
+                if response.status != ('member' or "creator"):
+                    if not message_is_deleted:
+                        bot.delete_message(message.chat.id, message.message_id)
+                        utils.send_info_message_and_delete_old_message(
+                            message=message,
+                            info=utils.ErrorMessage.subscribe_channel()
+                        )
+                        message_is_deleted = True
 
             except:
                 print('user is not member')
