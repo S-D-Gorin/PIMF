@@ -4,9 +4,13 @@ version: '3'
 
 services:
   bot:
+    restart: always
+    container_name: ChatPolice
     build:
       context: .
       dockerfile: ./dockerfile
+    environment:
+      BOT_TOKEN: $BOT_TOKEN
 
     volumes:
       - ./bot:/opt/bot
