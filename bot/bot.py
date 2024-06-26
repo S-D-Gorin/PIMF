@@ -28,7 +28,7 @@ def spam_security(message):
             message_is_deleted = True
         
         if str(message.chat.id) == GROUP_ID[1]:    
-            if not utils.Check.max_lenght(message) and message_is_deleted:
+            if not (utils.Check.max_lenght(message) and message_is_deleted):
                 bot.delete_message(message.chat.id, message.message_id)
                 utils.send_info_message_and_delete_old_message(
                     message=message,
@@ -38,7 +38,7 @@ def spam_security(message):
 
             try:
                 response = bot.get_chat_member(chat_id=TARGET_CHANNEL, user_id=int(message.from_user.id))
-                if response.status != ('member' or "creator") and message_is_deleted != False:
+                if (response.status != ('member' or "creator")) and (message_is_deleted != True):
                     bot.delete_message(message.chat.id, message.message_id)
                     utils.send_info_message_and_delete_old_message(
                         message=message,
