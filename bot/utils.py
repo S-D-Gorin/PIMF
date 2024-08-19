@@ -91,7 +91,7 @@ class ErrorMessage:
         return error_information
     
     def subscribe_channel(target_channel):
-        error_information = f'Подпишитесь на канал {target_channel} чтобы отправить сообщение'
+        error_information = f'подпишитесь на канал {target_channel}'
         return error_information
 
 

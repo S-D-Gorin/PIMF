@@ -28,6 +28,7 @@ SUPERUSERS = (
     'tenderlar23',
     'Channel_Bot',
     'somiokzn',
+    'rafissomio'
 )
 
 TARGET_CHANNEL = '@tenderlar23'
