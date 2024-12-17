@@ -31,7 +31,7 @@ SUPERUSERS = (
     'rafissomio'
 )
 
-TARGET_CHANNEL = '@tenderlar23'
+TARGET_CHANNEL = '@nikitasomio'
 
 
 MAX_LENGHT = 222
